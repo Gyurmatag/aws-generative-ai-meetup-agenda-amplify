@@ -3,10 +3,10 @@ import { talks } from '../lib/db/schema'
 import { RDSDataClient, ExecuteStatementCommand } from '@aws-sdk/client-rds-data'
 
 const rdsClient = new RDSDataClient({
-  region: process.env.AWS_REGION,
+  region: process.env.APP_REGION,
   credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+    accessKeyId: process.env.APP_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.APP_SECRET_ACCESS_KEY!,
   },
 });
 
